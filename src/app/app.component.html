@@ -1,2 +1,3 @@
 <p>Це app компонент</p>
-<app-test></app-test>
+<p>{{messageFromChild}}</p>
+<app-test [childMessage]="messageFromParents" (messageFromChild)="getMessageFromChild($event)"></app-test>

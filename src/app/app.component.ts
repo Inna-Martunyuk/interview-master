@@ -10,4 +10,9 @@ import { TestComponent } from './components/test/test.component';
 })
 export class AppComponent {
   title = 'interview-master';
+  messageFromParents = "Я твій батько";
+  messageFromChild = "";
+  getMessageFromChild(message: string) {
+    this.messageFromChild = message;
+  }
 }
