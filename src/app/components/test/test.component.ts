@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HighlifhtDirective } from '../../directives/highlifht.directive';
 
 
 @Component({
   selector: 'app-test',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HighlifhtDirective],
   templateUrl: './test.component.html',
   styleUrl: './test.component.scss',
 })
