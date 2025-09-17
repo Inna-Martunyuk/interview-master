@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HighlifhtDirective } from '../../directives/highlifht.directive';
+import { TodoService } from '../../services/todo.service';
 
 
 @Component({
@@ -23,6 +24,10 @@ export class TestComponent {
   isClickedState: boolean = false;
 
   inputText: string = "";
+  constructor(private todoService: TodoService) { }
+  ngOnInit() {
+    this.tasks = this.todoService.getTask;
+  }
 
   @Input() childMessage: string = "";
   @Output() messageFromChild = new EventEmitter<string>();
